@@ -1,5 +1,6 @@
 ## Outline
 
--styled-components
--Polished
--styled-components-modifiers
+- React
+- styled-components
+- Polished
+- styled-components-modifiers

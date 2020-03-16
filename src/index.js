@@ -7,6 +7,8 @@ import { GlobalStyle, darkTheme, defaultTheme } from "./utils";
 
 const App = () => {
   const [useDarkThemre, setUseDarkThemre] = useState(false);
+  const [showModal, setShowModal] = useState(false);
+
   return (
     <ThemeProvider theme={useDarkThemre ? darkTheme : defaultTheme}>
       <button
