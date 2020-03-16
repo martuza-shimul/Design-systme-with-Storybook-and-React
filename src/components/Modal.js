@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { useSpring, animated, config } from "react-spring";
 import { typeScale } from "../utils";
 import { Illustrations, CloseIcon } from "../assests";
 import { PrimaryButton } from "./Buttons";
@@ -39,20 +40,28 @@ const CloseModalButton = styled.button`
   padding: 0;
 `;
 
-export const SignUpModal = () => {
+export const SignUpModal = ({ showModal, setShowModal }) => {
+  const animation = useSpring({
+    opacity: showModal ? 1 : 0,
+    transform: showModal ? `translateY(0)` : `translateY(-200%)`,
+    config: config.molasses
+  });
+
   return (
-    <ModalWrapper>
-      <img
-        src={Illustrations.SignUp}
-        alt="Sign up for account"
-        aria-hidden="true"
-      />
-      <SignUpHeader>Sign Up</SignUpHeader>
-      <SignUpText>Sign Up today for getting awesome discount</SignUpText>
-      <PrimaryButton>Sign Up</PrimaryButton>
-      <CloseModalButton aria-label="Close Modal">
-        <CloseIcon />
-      </CloseModalButton>
-    </ModalWrapper>
+    <animated.div style={animation}>
+      <ModalWrapper>
+        <img
+          src={Illustrations.SignUp}
+          alt="Sign up for account"
+          aria-hidden="true"
+        />
+        <SignUpHeader>Sign Up</SignUpHeader>
+        <SignUpText>Sign Up today for getting awesome discount</SignUpText>
+        <PrimaryButton>Sign Up</PrimaryButton>
+        <CloseModalButton aria-label="Close Modal">
+          <CloseIcon />
+        </CloseModalButton>
+      </ModalWrapper>
+    </animated.div>
   );
 };
