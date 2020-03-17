@@ -12,3 +12,4 @@
   - @storybook/addon-docs
   - @storybook/addon-backgrounds
   - @storybook/addon-contexts
+  - @storybook/addon-knobs
