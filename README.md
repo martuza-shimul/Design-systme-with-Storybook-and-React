@@ -9,3 +9,6 @@
   - animated
   - config
 - storybook for documenting
+  - @storybook/addon-docs
+  - @storybook/addon-backgrounds
+  - @storybook/addon-contexts
