@@ -13,3 +13,4 @@
   - @storybook/addon-backgrounds
   - @storybook/addon-contexts
   - @storybook/addon-knobs
+  - @storybook/addon-a11y
